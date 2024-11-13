@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Shareable Resume Builder</h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend><h2>Personal Information</h2></legend>
+            <section>
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend><h2>Education</h2></legend>
+            <section>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree">
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution">
+                <label for="gradDate">Graduation Date:</label>
+                <input type="date" id="gradDate" name="gradDate">
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend><h2>Work Experience</h2></legend>
+            <section>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle">
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company">
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" name="duration">
+                <label for="responsibilities">Responsibilities:</label>
+                <textarea id="responsibilities" name="responsibilities"></textarea>
+            </section>
+        </fieldset>
+
+        <fieldset>
+            <legend><h2>Skills</h2></legend>
+            <section>
+                <label for="skills">Skills (comma separated):</label>
+                <input type="text" id="skills" name="skills">
+            </section>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" class="resume-output">
+        <!-- Dynamic resume will be generated here -->
+    </div>
+    <br>
+    
+    <!-- Shareable Link and Download-->
+    <div id="shareable-link-container" style="display: none">
+        <h2>Shareable Link</h2>
+        <p>Here is your unique link to view or edit your resume.</p>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
